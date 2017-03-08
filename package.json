@@ -1,0 +1,68 @@
+{
+  "name": "ceri-icon",
+  "description": "webpack based - load only what you need - svg inline icons",
+  "version": "0.0.0",
+  "homepage": "https://github.com/ceri-comps",
+  "author": {
+    "name": "Paul Pflugradt",
+    "email": "paul.pflugradt@gmail.com"
+  },
+  "license": "MIT",
+  "main": "icon-loader.js",
+  "browser": "icon.js",
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/ceri-comps/ceri-icon"
+  },
+  "engines": {
+    "node": "*"
+  },
+  "files": [
+    "*.js"
+  ],
+  "dependencies": {
+    "loader-utils": "^1.0.3",
+    "ceri": "^1.0.1",
+    "icomoon-free-npm": "0.0.0",
+    "material-design-icons": "^3.0.1",
+    "mdi": "^1.8.36",
+    "octicons": "^5.0.1",
+    "open-iconic": "^1.1.1",
+    "ratchet": "git://github.com/twbs/ratchet.git#v2.0.2",
+    "bootstrap": "^3.3.7",
+    "font-awesome": "^4.7.0",
+    "svgfont2js": "git://github.com/jGleitz/svgfont2js.git#90c8ccb6f42d2b93182789b2cc2a5ebcee8ebb8c",
+    "svgo": "^0.7.2"
+  },
+  "devDependencies": {
+    "coffee-loader": "^0.7.3",
+    "coffee-script": "^1.12.4",
+    "gh-pages": "^0.12.0",
+    "script-runner": "^0.1.6",
+    "ceri-dev-server": "^1.0.1",
+    "ceri-compiler": "^1.0.2",
+    "ceri-loader": "^1.0.0",
+    "karma-ceri": "^1.0.1"
+  },
+  "keywords": [
+    "icon",
+    "webpack",
+    "component",
+    "ceri"
+  ],
+  "readmeFilename": "README.md",
+  "scripts": {
+    "build:coffee": "coffee --no-header --compile --output . src/*.coffee",
+    "build:bundle": "ceri-compiler -b icon.js",
+    "build:icons": "coffee ./src/icon-normalizer.coffee",
+    "build": "run-npm build:*",
+    "dev": "ceri-dev-server",
+    "watch": "ceri-dev-server --test --watch",
+    "test": "ceri-dev-server --test",
+    "preversion": "npm test",
+    "version": "npm run build && git add .",
+    "postversion": "git push && git push --tags && npm publish",
+    "ghpages": "ceri-dev-server --static static/ && gh-pages -d static",
+    "install": "node ./icon-normalizer.js"
+  }
+}
