@@ -13,11 +13,14 @@ module.exports = ceri
     require "ceri/lib/styles"
     require "ceri/lib/props"
     require "ceri/lib/util"
+    require "ceri/lib/#show"
   ]
 
   structure: template 1, """
-    <svg version="1.1" :role="role" :aria-label="label" :width="outerWidth" :height="outerHeight" :view-box.camel="box">
-      <path :d="icon.d" :transform="flipped" fill="currentColor"></path>
+    <svg version="1.1" :role="role"
+    #show.delay=icon :aria-label="label" width=0 height=0 :width="outerWidth" :height="outerHeight" 
+    :view-box.camel="box">
+      <path :d="icon.d"  :transform="flipped" fill="currentColor"></path>
     </svg>
     <slot></slot>
   """

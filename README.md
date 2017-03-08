@@ -13,7 +13,7 @@ supports:
 - [(ra) ratchicons](http://goratchet.com/components/#ratchicons) - add `and` for android version `ra-download` -> `ra-and-download`
 
 
-### [Demo](https://vue-comps.github.io/vue-icons)
+### [Demo](https://ceri-comps.github.io/ceri-icon)
 
 heavily inspired by [vue-awesome](https://github.com/Justineo/vue-awesome).
 
