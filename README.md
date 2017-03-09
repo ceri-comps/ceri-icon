@@ -50,7 +50,8 @@ window.customElements.define("ceri-icon", require("ceri-icon"))
 ```html
 <ceri-icon name="fa-thumbs-up"></ceri-icon>
 ```
-see [`dev/`](https://github.com/ceri-comps/ceri-icon/tree/master/dev) for examples.
+
+For examples see [`dev/`](dev/).
 
 #### Props
 Name | type | default | description

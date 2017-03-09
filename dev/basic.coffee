@@ -3,7 +3,7 @@ ceri = require "ceri-dev-server/lib/createView"
 module.exports = ceri
   structure: template 1,"""
     <div class="container" style="font-size:12pt;">
-    <a href="https://github.com/vue-comps/vue-icons/blob/master/dev/basic.vue">source</a>
+    <a href="https://github.com/ceri-comps/ceri-icons/blob/master/dev/basic.coffee">source</a>
     <p>fa-glass:
       <ce-icon name="fa-glass" #ref="fa"></ce-icon>
     </p>
