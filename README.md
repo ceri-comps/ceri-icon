@@ -2,6 +2,10 @@
 
 webpack based - load only what you need - svg inline icons.
 
+Features:
+- plain JS - no dependencies
+- 21kB unzipped with animations - even smaller when using multiple ceri components
+
 supports:
 - [(fa) Font Awesome](https://fortawesome.github.io/Font-Awesome/icons/)
 - [(ma) Google Material Design Icons](https://design.google.com/icons/) - spaces in icon names are replaced by `_`, e.g. `material-done_all`.
