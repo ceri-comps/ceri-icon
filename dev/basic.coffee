@@ -2,7 +2,6 @@ window.customElements.define "ce-icon", require "../src/icon.coffee"
 ceri = require "ceri-dev-server/lib/createView"
 module.exports = ceri
   structure: template 1,"""
-    <div class="container" style="font-size:12pt;">
     <a href="https://github.com/ceri-comps/ceri-icon/blob/master/dev/basic.coffee">source</a>
     <p>fa-glass:
       <ce-icon name="fa-glass" #ref="fa"></ce-icon>
@@ -85,9 +84,9 @@ module.exports = ceri
         <ce-icon name="fa-beer" offset-x="30" scale="1.2" offset-y="-20"></ce-icon>
       </ce-icon>
     </p>
-    
-    </div>
   """
+  connectedCallback: ->
+    @style.fontSize = "12pt"
   tests: (el) ->
     describe "icon", ->
       after ->
