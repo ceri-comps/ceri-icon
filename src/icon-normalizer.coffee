@@ -102,8 +102,8 @@ processSet = (setname,set) ->
               resolve null
     for f in ["node_modules/#{set.folder}","../#{set.folder}"]
       folder = path.resolve(f)
-      if fs.lstatSync(folder).isDirectory()
-        break
+      try
+        break if fs.lstatSync(folder).isDirectory()
       folder = null
     if folder
       for file,i in fs.readdirSync(folder)

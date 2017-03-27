@@ -69,13 +69,15 @@ module.exports = ceri
       return "absolute" if @stackParent
       return null
     processedName: ->
+      return null unless @name
       tmp = @name.split("-")
       set = tmp.shift()
       return [set,tmp.join("-")]
     icon: ->
+      return null unless @processedName
       getIcon(@processedName[0],@util.camelize(@processedName[1]))
     box: ->
-      return null unless @heightRatio
+      return null unless @heightRatio and @icon
       w = @icon.w
       h = @icon.h
       wOffset = -w * ((@widthRatio - 1) / 2 + @offsetX / 100)
@@ -89,7 +91,9 @@ module.exports = ceri
       else
         s += "#{hOffset} "
       return s+"#{w*@widthRatio} #{h*@heightRatio}"
-    aspect: -> @icon.w / @icon.h
+    aspect: -> 
+      return null unless @icon
+      @icon.w / @icon.h
     innerWidth: ->
       @aspect * @innerHeight
     outerWidth: ->

@@ -21,8 +21,8 @@
     "*.js"
   ],
   "dependencies": {
-    "loader-utils": "^1.0.3",
-    "ceri": "^1.0.3",
+    "loader-utils": "^1.1.0",
+    "ceri": "^1.0.11",
     "icomoon-free-npm": "0.0.0",
     "material-design-icons": "^3.0.1",
     "mdi": "^1.8.36",
@@ -39,10 +39,10 @@
     "coffee-script": "^1.12.4",
     "gh-pages": "^0.12.0",
     "script-runner": "^0.1.6",
-    "ceri-dev-server": "^1.0.1",
-    "ceri-compiler": "^1.0.2",
+    "ceri-dev-server": "^1.0.4",
+    "ceri-compiler": "^1.0.6",
     "ceri-loader": "^1.0.0",
-    "karma-ceri": "^1.0.1"
+    "karma-ceri": "^1.0.2"
   },
   "keywords": [
     "icon",
@@ -53,7 +53,7 @@
   "readmeFilename": "README.md",
   "scripts": {
     "build:coffee": "coffee --no-header --compile --output . src/*.coffee",
-    "build:bundle": "ceri-compiler -b icon.js",
+    "build:bundle": "ceri-compiler icon.js",
     "build:icons": "coffee ./src/icon-normalizer.coffee",
     "build": "run-npm build:*",
     "dev": "ceri-dev-server",
