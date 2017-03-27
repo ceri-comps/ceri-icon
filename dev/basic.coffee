@@ -89,6 +89,7 @@ module.exports = ceri
     @style.fontSize = "12pt"
   tests: (el) ->
     describe "icon", ->
+      before (done) -> setTimeout done,250
       after ->
         el.remove()
       it "should font awesome", ->

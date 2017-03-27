@@ -41,11 +41,10 @@ module.exports = ceri
     flipV: Boolean
     label: String
     hcenter: Boolean
+  initStyle:
+    display: "inline-block"
   styles:
     this:
-      data: -> 
-        display: "inline-block"
-        lineHeight: ""
       computed: ->
         height: @outerHeight + "px"
         position: @position

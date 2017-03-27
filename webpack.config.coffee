@@ -1,5 +1,6 @@
 path = require "path"
 module.exports =
+  devtool: false
   module:
     rules: [{ 
         test: /ceri-icon(\/src)?\/icon/
