@@ -143,5 +143,7 @@ processSet = (setname,set) ->
   .then JSON.stringify
   .then fs.writeFileSync.bind(null, path.resolve(iconPath,"#{setname}.json"))
 console.log "\n\nNormalizing SVG Icons for ceri-icon\n-------------"
+try
+  fs.mkdirSync(iconsPath)
 for setname, set of sets
   processSet(setname,set)
