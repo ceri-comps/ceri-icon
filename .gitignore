@@ -6,3 +6,4 @@ npm-debug.log
 static
 *.js
 icons/
+shrinkwrap.yaml
