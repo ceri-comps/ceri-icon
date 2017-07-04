@@ -84,9 +84,21 @@ module.exports = ceri
         <ce-icon name="fa-beer" offset-x="30" scale="1.2" offset-y="-20"></ce-icon>
       </ce-icon>
     </p>
+    <p>
+      <span :text=iconName></span>
+      <ce-icon :name=iconName >
+      </ce-icon>
+      <button style=margin-left:10px @click=toggle>Change</button>
+    </p>
   """
+  data: ->
+    iconName: "gly-heart"
+  methods:
+    toggle: -> @iconName = if @iconName=="gly-heart" then "oc-heart" else "gly-heart"
   connectedCallback: ->
     @style.fontSize = "12pt"
+    #@style.backgroundColor = "grey"
+    @style.display = "block"
   tests: (el) ->
     describe "icon", ->
       before (done) -> setTimeout done,250

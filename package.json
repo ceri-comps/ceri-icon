@@ -21,28 +21,29 @@
     "*.js"
   ],
   "dependencies": {
-    "loader-utils": "^1.1.0",
-    "ceri": "^1.0.11",
+    "bootstrap": "^3.3.7",
+    "ceri": "^1.0.19",
+    "font-awesome": "^4.7.0",
     "icomoon-free-npm": "0.0.0",
+    "loader-utils": "^1.1.0",
     "material-design-icons": "^3.0.1",
-    "mdi": "^1.8.36",
+    "mdi": "^1.9.33",
     "octicons": "^5.0.1",
     "open-iconic": "^1.1.1",
     "ratchet": "git://github.com/twbs/ratchet.git#v2.0.2",
-    "bootstrap": "^3.3.7",
-    "font-awesome": "^4.7.0",
     "svgfont2js": "git://github.com/jGleitz/svgfont2js.git#90c8ccb6f42d2b93182789b2cc2a5ebcee8ebb8c",
-    "svgo": "^0.7.2"
+    "svgo": "^0.7.2",
+    "svgpath": "^2.2.1"
   },
   "devDependencies": {
+    "ceri-compiler": "^1.1.1",
+    "ceri-dev-server": "^1.0.7",
+    "ceri-loader": "^1.1.0",
     "coffee-loader": "^0.7.3",
-    "coffee-script": "^1.12.4",
-    "gh-pages": "^0.12.0",
-    "script-runner": "^0.1.6",
-    "ceri-dev-server": "^1.0.4",
-    "ceri-compiler": "^1.0.6",
-    "ceri-loader": "^1.0.0",
-    "karma-ceri": "^1.0.2"
+    "coffee-script": "^1.12.6",
+    "gh-pages": "^1.0.0",
+    "karma-ceri": "^1.0.2",
+    "script-runner": "^0.1.7"
   },
   "keywords": [
     "icon",
