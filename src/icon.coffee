@@ -50,7 +50,7 @@ module.exports = ceri
     hcenter: Boolean
   initStyle:
     display: "inline-block"
-  computedStyle: ->
+  computedStyle: this: ->
     if @isStack
       position = "relative"
     else if @stackParent

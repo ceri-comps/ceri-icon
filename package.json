@@ -22,7 +22,7 @@
   ],
   "dependencies": {
     "bootstrap": "^3.3.7",
-    "ceri": "^1.0.19",
+    "ceri": "^1.0.24",
     "font-awesome": "^4.7.0",
     "icomoon-free-npm": "0.0.0",
     "loader-utils": "^1.1.0",
@@ -36,13 +36,12 @@
     "svgpath": "^2.2.1"
   },
   "devDependencies": {
-    "ceri-compiler": "^1.1.1",
-    "ceri-dev-server": "^1.0.7",
+    "ceri-compiler": "^1.1.2",
+    "ceri-dev-server": "^1.0.9",
     "ceri-loader": "^1.1.0",
     "coffee-loader": "^0.7.3",
     "coffee-script": "^1.12.6",
     "gh-pages": "^1.0.0",
-    "karma-ceri": "^1.0.2",
     "script-runner": "^0.1.7"
   },
   "keywords": [
