@@ -60,7 +60,7 @@
   "scripts": {
     "build:coffee": "coffee-cli --next --bare --no-header --compile --output lib/ src/*.coffee",
     "build:coffeeclient": "coffee-cli --no-header --compile --output lib/ src/icon.coffee",
-    "build:bundle": "ceri-compiler lib/icon.js",
+    "build:bundle": "ceri-compiler --out lib/ lib/icon.js",
     "build:icons": "coffee ./src/icon-normalizer.coffee",
     "build": "run-npm build:*",
     "dev": "ceri-dev-server",
