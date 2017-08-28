@@ -1,6 +1,9 @@
 path = require "path"
 if path.extname(__filename) == ".coffee"
-  iconsPath = "../icons"
-else
-  iconsPath = "./icons"
+  try
+    require "coffeescript/register"
+  catch
+    try
+      require "coffee-script/register"
+iconsPath = "../icons"
 module.exports = path.resolve(__dirname, iconsPath)

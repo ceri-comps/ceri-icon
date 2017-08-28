@@ -1,10 +1,11 @@
 # ceri-icon
 
 webpack based - load only what you need - svg inline icons.
+See [ceri-flag](https://github.com/ceri-comps/ceri-flag) if you need a svg inline flag.
 
 Features:
 - plain JS - no dependencies
-- 21kB unzipped with animations - even smaller when using multiple ceri components
+- 21kB unzipped - even smaller when using multiple ceri components
 
 supports:
 - [(fa) Font Awesome](https://fortawesome.github.io/Font-Awesome/icons/)
@@ -16,6 +17,12 @@ supports:
 - [(im) IcoMoon-free](https://icomoon.io/#preview-free)
 - [(ra) ratchicons](http://goratchet.com/components/#ratchicons) - add `and` for android version `ra-download` -> `ra-and-download`
 
+If you need other free icon sets, let me know..
+
+# Change in 0.2
+
+ceri-icon is now a webpack plugin instead of a loader. See changed (easier) usage instruction below.
+Also initial optimiziation of icons is way faster on multi-core machines.
 
 ### [Demo](https://ceri-comps.github.io/ceri-icon)
 
@@ -32,19 +39,19 @@ npm install --save-dev ceri-icon
 
 
 - webpack.config:
-```coffee
-module:
-  rules: [{ 
-    test: /ceri-icon\/icon/
-    enforce: "post"
-    loader: "ceri-icon"
-    options:
-      icons: [
-        # add the icons you are using
-        # e.g.
-        "oc-heart"
-        ]
-  }]
+```js
+// webpack.config.js
+Icons = require("ceri-icon")
+...
+module.exports = {
+  ...
+  plugins:[
+    ...
+    new Icons(["fa-heart","gly-heart"])
+    ...
+  ]
+  ...
+}
 ```
 
 - in your project
@@ -52,7 +59,7 @@ module:
 window.customElements.define("ceri-icon", require("ceri-icon"))
 ```
 ```html
-<ceri-icon name="fa-thumbs-up"></ceri-icon>
+<ceri-icon name="fa-heart"></ceri-icon>
 ```
 
 For examples see [`dev/`](dev/).

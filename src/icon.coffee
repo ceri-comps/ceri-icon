@@ -1,9 +1,4 @@
-getIcons = ->
-getIcons()
-if process.env.NODE_ENV != 'production' and not getIcon?
-  console.error "icon-loader wasn't called - please see ceri-icons documentation on how to setup webpack"
-  getIcon = (name1,name2)->
-    console.error "vue-icons isn't setup properly - failed to get #{name1}-#{name2}"
+icons = require "./_ceri-icon.json"
 ceri = require "ceri/lib/wrapper"
 module.exports = ceri
   isCeriIcon: true
@@ -12,7 +7,6 @@ module.exports = ceri
     require "ceri/lib/svg"
     require "ceri/lib/style"
     require "ceri/lib/props"
-    require "ceri/lib/util"
     require "ceri/lib/#show"
   ]
 
@@ -59,6 +53,7 @@ module.exports = ceri
       position = null
     return {
       height: @outerHeight + "px"
+      width: @outerWidth + "px"
       position: position
       left: if @stackParent then 0 else null
     }
@@ -74,14 +69,13 @@ module.exports = ceri
         @isStack = true
       
   computed:
-    processedName: ->
-      return null unless @name
-      tmp = @name.split("-")
-      set = tmp.shift()
-      return [set,tmp.join("-")]
-    icon: ->
-      return null unless @processedName
-      i = getIcon(@processedName[0],@util.camelize(@processedName[1]))
+    icon: -> 
+      i = icons[@name]
+      if typeof i == "string" or i instanceof String
+        i = icons[i]
+      if process.env.NODE_ENV != 'production' and @name? and not i?
+        console.log icons
+        console.error "ceri-icon isn't setup properly - failed to get #{@name}"
       return i
     box: ->
       return null unless @heightRatio and @icon

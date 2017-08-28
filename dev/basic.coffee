@@ -86,7 +86,7 @@ module.exports = ceri
     </p>
     <p>
       <span :text=iconName></span>
-      <ce-icon :name=iconName >
+      <ce-icon :name=iconName #ref=change>
       </ce-icon>
       <button style=margin-left:10px @click=toggle>Change</button>
     </p>
@@ -94,7 +94,9 @@ module.exports = ceri
   data: ->
     iconName: "gly-heart"
   methods:
-    toggle: -> @iconName = if @iconName=="gly-heart" then "oc-heart" else "gly-heart"
+    toggle: -> 
+      @iconName = if @iconName=="gly-heart" then "oc-heart" else "gly-heart"
+      #@change.name = if @change.name=="gly-heart" then "oc-heart" else "gly-heart"
   connectedCallback: ->
     @style.fontSize = "12pt"
     #@style.backgroundColor = "grey"

@@ -8,8 +8,8 @@
     "email": "paul.pflugradt@gmail.com"
   },
   "license": "MIT",
-  "main": "icon-loader.js",
-  "browser": "icon.js",
+  "main": "lib/icon-plugin.js",
+  "browser": "lib/icon.js",
   "repository": {
     "type": "git",
     "url": "git://github.com/ceri-comps/ceri-icon"
@@ -18,29 +18,36 @@
     "node": "*"
   },
   "files": [
-    "*.js"
+    "lib/"
   ],
   "dependencies": {
     "bootstrap": "^3.3.7",
     "ceri": "^1.0.24",
+    "flag-icon-css": "^2.8.0",
     "font-awesome": "^4.7.0",
+    "fs-extra": "^4.0.1",
+    "handle-that": "^0.1.0",
     "icomoon-free-npm": "0.0.0",
     "loader-utils": "^1.1.0",
     "material-design-icons": "^3.0.1",
-    "mdi": "^1.9.33",
-    "octicons": "^5.0.1",
+    "mdi": "^2.0.46",
+    "octicons": "^6.0.1",
     "open-iconic": "^1.1.1",
+    "ora": "^1.3.0",
     "ratchet": "git://github.com/twbs/ratchet.git#v2.0.2",
     "svgfont2js": "git://github.com/jGleitz/svgfont2js.git#90c8ccb6f42d2b93182789b2cc2a5ebcee8ebb8c",
     "svgo": "^0.7.2",
-    "svgpath": "^2.2.1"
+    "svgpath": "^2.2.1",
+    "virtual-module-webpack-plugin": "^0.3.0"
   },
   "devDependencies": {
     "ceri-compiler": "^1.1.2",
     "ceri-dev-server": "^1.0.9",
     "ceri-loader": "^1.1.0",
+    "coffee-cli": "^0.2.1",
     "coffee-loader": "^0.7.3",
-    "coffee-script": "^1.12.6",
+    "coffee-script": "^1.12.7",
+    "coffeescript": "^2.0.0-beta4",
     "gh-pages": "^1.0.0",
     "script-runner": "^0.1.7"
   },
@@ -52,8 +59,9 @@
   ],
   "readmeFilename": "README.md",
   "scripts": {
-    "build:coffee": "coffee --no-header --compile --output . src/*.coffee",
-    "build:bundle": "ceri-compiler icon.js",
+    "build:coffee": "coffee-cli --next --bare --no-header --compile --output lib/ src/*.coffee",
+    "build:coffeeclient": "coffee-cli --no-header --compile --output lib/ src/icon.coffee",
+    "build:bundle": "ceri-compiler lib/icon.js",
     "build:icons": "coffee ./src/icon-normalizer.coffee",
     "build": "run-npm build:*",
     "dev": "ceri-dev-server",
@@ -63,6 +71,6 @@
     "version": "npm run build && git add .",
     "postversion": "git push && git push --tags && npm publish",
     "ghpages": "ceri-dev-server --static static/ && gh-pages -d static",
-    "install": "node ./icon-normalizer.js"
+    "install": "node ./lib/icon-normalizer.js"
   }
 }
