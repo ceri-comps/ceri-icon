@@ -1,6 +1,6 @@
 # ceri-icon
 
-webpack based - load only what you need - svg inline icons.
+webpack based - load only what you need - svg inline icons.  
 See [ceri-flag](https://github.com/ceri-comps/ceri-flag) if you need a svg inline flag.
 
 Features:
@@ -19,14 +19,15 @@ supports:
 
 If you need other free icon sets, let me know..
 
-# Change in 0.2
-
-ceri-icon is now a webpack plugin instead of a loader. See changed (easier) usage instruction below.
-Also initial optimiziation of icons is way faster on multi-core machines.
-
 ### [Demo](https://ceri-comps.github.io/ceri-icon)
 
 heavily inspired by [vue-awesome](https://github.com/Justineo/vue-awesome).
+
+# Change in 0.2
+
+- ceri-icon is now a webpack plugin instead of a loader.  
+See changed (easier) usage instruction below.
+- initial optimiziation of icons is way faster on multi-core machines.
 
 # Install
 
