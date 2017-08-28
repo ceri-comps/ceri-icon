@@ -22,8 +22,7 @@
   ],
   "dependencies": {
     "bootstrap": "^3.3.7",
-    "ceri": "^1.0.24",
-    "flag-icon-css": "^2.8.0",
+    "ceri": "^1.0.25",
     "font-awesome": "^4.7.0",
     "fs-extra": "^4.0.1",
     "handle-that": "^0.1.0",
@@ -42,7 +41,7 @@
   },
   "devDependencies": {
     "ceri-compiler": "^1.1.2",
-    "ceri-dev-server": "^1.0.9",
+    "ceri-dev-server": "^1.0.10",
     "ceri-loader": "^1.1.0",
     "coffee-cli": "^0.2.1",
     "coffee-loader": "^0.7.3",
