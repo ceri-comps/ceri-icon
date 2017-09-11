@@ -22,10 +22,10 @@
   ],
   "dependencies": {
     "bootstrap": "^3.3.7",
-    "ceri": "^1.0.25",
+    "ceri": "^1.0.26",
     "font-awesome": "^4.7.0",
     "fs-extra": "^4.0.1",
-    "handle-that": "^0.1.0",
+    "handle-that": "^0.1.3",
     "icomoon-free-npm": "0.0.0",
     "loader-utils": "^1.1.0",
     "material-design-icons": "^3.0.1",
@@ -40,8 +40,8 @@
     "virtual-module-webpack-plugin": "^0.3.0"
   },
   "devDependencies": {
-    "ceri-compiler": "^1.1.3",
-    "ceri-dev-server": "^1.0.10",
+    "ceri-compiler": "^1.1.4",
+    "ceri-dev-server": "^1.0.12",
     "ceri-loader": "^1.1.0",
     "coffee-cli": "^0.2.1",
     "coffee-loader": "^0.7.3",

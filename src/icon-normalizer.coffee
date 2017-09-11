@@ -50,14 +50,14 @@ console.log "\nNormalizing and optimizing SVG Icons for ceri-icon"
 
 fs.ensureDir(iconPath)
 
-spinner = ora((remaining = sets.length) + " icon sets remaining...").start()
+spinner = ora(sets.length + " icon sets remaining...").start()
 
 handleThat sets,
   worker: path.resolve(iconPath, "../lib", "_worker")
-  onText: (lines) =>
+  onText: (lines, remaining) =>
     spinner.stop()
     console.log(lines.join("\n"))
     spinner.start(remaining + " icon sets remaining...")
-  onProgress: (count) => spinner.text = (remaining = count) + " icon sets remaining..."
+  onProgress: (remaining) => spinner.text = remaining + " icon sets remaining..."
   onFinish: => spinner.succeed "all icon sets normalized and optimized"
 
