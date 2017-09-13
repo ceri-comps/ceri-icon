@@ -45,6 +45,11 @@ sets = [{
     short: "ra"
     name: "ratchet"
     svg: "ratchet/fonts/ratchicons.svg"
+  },{
+    short: "si"
+    name: "simple-icons"
+    folder: "simple-icons/icons"
+    re: "([A-Za-z0-9-]+).svg"
   }]
 console.log "\nNormalizing and optimizing SVG Icons for ceri-icon"
 

@@ -35,6 +35,7 @@
     "ora": "^1.3.0",
     "ratchet": "git://github.com/twbs/ratchet.git#v2.0.2",
     "svgfont2js": "git://github.com/jGleitz/svgfont2js.git#90c8ccb6f42d2b93182789b2cc2a5ebcee8ebb8c",
+    "simple-icons": "git://github.com/simple-icons/simple-icons.git#0b82bbb8ca94d5399b8cf223cc2bcc8796b4bb7e",
     "svgo": "^0.7.2",
     "svgpath": "^2.2.1",
     "virtual-module-webpack-plugin": "^0.3.0"

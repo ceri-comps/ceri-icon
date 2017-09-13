@@ -57,6 +57,9 @@ module.exports = ceri
     <p>ra-and-download:
       <ce-icon name="ra-and-download"></ce-icon>
     </p>
+    <p>si-ted:
+      <ce-icon name="si-ted"></ce-icon>
+    </p>
     <p>ic-wrench:
       <ce-icon name="ic-wrench" #ref="iconic"></ce-icon>
       <span>(vertical-align:sub):</span>

@@ -52,20 +52,28 @@ module.exports = (sets) => Promise.all sets.map (set) =>
     if folder
       processFile = (file, name) =>
         fs.readFile file, encoding:"utf8"
-        .then (content) => new Promise (resolve) =>
-          svgo.optimize content, (result) =>
-            d  = re.exec(result.data)
-            box = /viewBox="0 0 ([0-9]+) ([0-9]+)"/.exec(result.data)
-            if d? and d.length > 1 and box? and box.length > 2
-              resolve {
-                name: name
-                path: d[1]
-                width: box[1]
-                height: box[2]
-              }
-            else
-              #console.log "#{set.short}: #{name} failed to match"
-              resolve null
+        .then (content) => new Promise (resolve, reject) =>
+          try
+            svgo.optimize content, (result) =>
+              d  = re.exec(result.data)
+              box = /viewBox="0 0 ([0-9]+) ([0-9]+)"/.exec(result.data)
+              if d? and d.length > 1 and box? and box.length > 2
+                resolve {
+                  name: name
+                  path: d[1]
+                  width: box[1]
+                  height: box[2]
+                }
+              else
+                #console.log "#{set.short}: #{name} failed to match"
+                resolve null
+          catch e
+            console.error "svgo failed for file: #{file}"
+            console.error e 
+            resolve()
+        .catch (e) =>
+          console.error "file: #{file}"
+          console.error e 
       files = await fs.readdir(folder)
       tmpre = new RegExp(set.re,"i")
       for file in files

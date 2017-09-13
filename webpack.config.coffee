@@ -20,5 +20,6 @@ module.exports =
       "im-IcoMoon"
       "ra-download"
       "ra-and-download"
+      "si-ted"
       ]
   ]

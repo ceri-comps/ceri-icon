@@ -16,6 +16,7 @@ supports:
 - [(gly) Glyphicons](http://getbootstrap.com/components/#glyphicons)
 - [(im) IcoMoon-free](https://icomoon.io/#preview-free)
 - [(ra) ratchicons](http://goratchet.com/components/#ratchicons) - add `and` for android version `ra-download` -> `ra-and-download`
+- [(si) Simple Icons](https://simpleicons.org/)
 
 If you need other free icon sets, let me know..
 
